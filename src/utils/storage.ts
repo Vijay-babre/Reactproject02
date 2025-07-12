@@ -2,7 +2,7 @@ import axios from 'axios';
 import { ChatSession, ChatMessage } from '../types/chat';
 import { getToken } from './auth';
 
-const API_URL = 'http://localhost:5000/api';
+const API_URL = 'https://gemini-backend-gox1.onrender.com/api';
 
 export async function saveChatSessions(sessions: ChatSession[], userId?: string): Promise<void> {
   // Note: This function is mostly for compatibility with existing code.

@@ -1,7 +1,7 @@
 import axios from 'axios';
 import { User } from '../types/chat';
 
-const API_URL = 'http://localhost:5000/api';
+const API_URL = 'https://gemini-backend-gox1.onrender.com/api';
 const CURRENT_USER_KEY = 'gemini-chat-current-user';
 const TOKEN_KEY = 'gemini-chat-token';
 

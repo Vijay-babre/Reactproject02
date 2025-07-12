@@ -50,7 +50,7 @@ const ChatInterface: React.FC<ChatInterfaceProps> = ({ user, onLogout }) => {
     try {
       const token = getToken();
       const headers = token ? { Authorization: `Bearer ${token}` } : {};
-      const response = await fetch('http://localhost:5000/api/chat/sessions', {
+      const response = await fetch('https://gemini-backend-gox1.onrender.com/api/chat/sessions', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -133,7 +133,7 @@ const ChatInterface: React.FC<ChatInterfaceProps> = ({ user, onLogout }) => {
         const headers = token ? { Authorization: `Bearer ${token}` } : {};
         const sessionsToDelete = await loadChatSessions(user?._id);
         for (const session of sessionsToDelete) {
-          await fetch(`http://localhost:5000/api/chat/sessions/${session.id}`, {
+          await fetch(`https://gemini-backend-gox1.onrender.com/api/chat/sessions/${session.id}`, {
             method: 'DELETE',
             headers,
           });

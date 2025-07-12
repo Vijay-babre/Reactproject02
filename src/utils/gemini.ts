@@ -1,7 +1,7 @@
 import axios from 'axios';
 import { getToken } from './auth';
 
-const API_URL = 'http://localhost:5000/api';
+const API_URL = 'https://gemini-backend-gox1.onrender.com/api';
 
 export async function sendMessageToGemini(message: string, sessionId: string): Promise<string> {
   try {
